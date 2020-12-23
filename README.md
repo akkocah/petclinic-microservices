@@ -1031,7 +1031,7 @@ git checkout feature/msp-15
 
 ``` bash
 PATH="$PATH:/usr/local/bin"
-APP_REPO_NAME="clarusway-repo/petclinic-app-dev"
+APP_REPO_NAME="clarusway-repo/petclinic-app-dev" #clarusway-repo should be changed with your repo name
 AWS_REGION="us-east-1"
 
 aws ecr create-repository \
@@ -1079,6 +1079,7 @@ git push --set-upstream origin feature/msp-16
   * Select github project and write the url to your repository's page into `Project url` (https://github.com/[your-github-account]/petclinic-microservices)
   * Under the `Source Code Management` select `Git` 
   * Write the url of your repository into the `Repository URL` (https://github.com/[your-github-account]/petclinic-microservices.git)
+<<<<<<< HEAD
   * Add `*/feature/msp-16`branch to `Branches to build`
   * Select `Add timestamps to the Console Output` under `Build Environment`
   * Click `Add build step` under `Build` and select `Execute Shell`
@@ -1093,6 +1094,21 @@ pip3 --version
 ansible --version
 aws --version
 ```
+=======
+  * Add `*/dev`branch to `Branches to build`
+  * Select `Add timestamps to the Console Output` under `Build Environment`
+  * Click `Add build step` under `Build` and select `Execute Shell`
+  * Write below script into the `Command` for checking the environment tools and versions with following script.
+    ```bash
+    echo $PATH
+    whoami
+    PATH="$PATH:/usr/local/bin"
+    python3 --version
+    pip3 --version
+    ansible --version
+    aws --version
+    ```
+>>>>>>> 894c3f2e4e5d3f4176388552ec7a37cb340ea5e0
   * Click `Save`
 
 - After running the job above, replace the script with the one below in order to test creating key pair for `ansible`.
@@ -1492,6 +1508,7 @@ git push origin dev
 ```
 
 ## MSP 17 - Prepare a QA Automation Pipeline for Nightly Builds
+<<<<<<< HEAD
 
 - Create `feature/msp-17` branch from `dev`.
 
@@ -2024,3 +2041,5 @@ git push origin dev
 ```
 
 ## MSP 18 - Create a QA Environment on Docker Swarm with Clouldformation and Ansible
+=======
+>>>>>>> 894c3f2e4e5d3f4176388552ec7a37cb340ea5e0
