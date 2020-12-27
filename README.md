@@ -2300,7 +2300,7 @@ docker push "${IMAGE_TAG_GRAFANA_SERVICE}"
 docker push "${IMAGE_TAG_PROMETHEUS_SERVICE}"
 ```
 
-- Prepare a docker compose file for swarm deployment on QA environment and save it as `docker-compose-swarm-qa.yml`.
+- Prepare a docker compose file for swarm deployment on QA environment and save it as `docker-compose-swarm-qa.yml`. under the main folder. petclinic folder
 
 ```yaml
 version: '3.8'
